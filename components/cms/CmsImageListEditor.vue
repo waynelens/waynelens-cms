@@ -44,6 +44,17 @@ const fileLabel = (url: string) => {
     return url || '空白 URL'
   }
 }
+const thumbnailUrl = (source: string) => {
+  try {
+    const url = new URL(source)
+    if (url.origin !== 'https://media.waynelens.dev' || !/\.(?:avif|gif|jpe?g|png|webp)$/iu.test(url.pathname)) {
+      return source
+    }
+    return `https://waynelens.dev/cdn-cgi/image/width=128,fit=scale-down,quality=70,format=auto,onerror=redirect/${source}`
+  } catch {
+    return source
+  }
+}
 </script>
 
 <template>
@@ -69,7 +80,7 @@ const fileLabel = (url: string) => {
         <div class="image-row__preview">
           <img
             v-if="url"
-            :src="url"
+            :src="thumbnailUrl(url)"
             alt=""
             loading="lazy"
             width="52"
