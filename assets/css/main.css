@@ -1,0 +1,27 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+  background: #101214;
+  color: #f2f4f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgb(55 87 76 / 28%), transparent 42rem),
+    #101214;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
