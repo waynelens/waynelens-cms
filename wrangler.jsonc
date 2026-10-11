@@ -5,6 +5,9 @@
   "compatibility_date": "2026-10-11",
   "compatibility_flags": ["nodejs_compat"],
   "keep_vars": true,
+  "secrets": {
+    "required": ["GITHUB_APP_PRIVATE_KEY"]
+  },
   "workers_dev": false,
   "vars": {
     "GITHUB_APP_ID": "5274408",
