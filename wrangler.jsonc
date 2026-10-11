@@ -15,6 +15,12 @@
     "directory": ".output/public",
     "binding": "ASSETS"
   },
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "githubpage-media"
+    }
+  ],
   "observability": {
     "enabled": true
   }
