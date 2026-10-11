@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-11',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
   nitro: {
     preset: 'cloudflare_module'
