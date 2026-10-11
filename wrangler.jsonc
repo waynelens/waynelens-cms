@@ -4,7 +4,16 @@
   "main": ".output/server/index.mjs",
   "compatibility_date": "2026-10-11",
   "compatibility_flags": ["nodejs_compat"],
+  "keep_vars": true,
   "workers_dev": false,
+  "vars": {
+    "GITHUB_APP_ID": "5274408",
+    "GITHUB_APP_INSTALLATION_ID": "170278571",
+    "GITHUB_OWNER": "waynelens",
+    "GITHUB_REPO": "waynelens.github.io",
+    "GITHUB_BRANCH": "main",
+    "R2_PUBLIC_BASE_URL": "https://media.waynelens.dev"
+  },
   "routes": [
     {
       "pattern": "cms.waynelens.dev",

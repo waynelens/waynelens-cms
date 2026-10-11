@@ -186,7 +186,10 @@ const formatModified = (value: string) => {
         title="GitHub App"
         :description="githubStatus?.connected
           ? `已連線 ${githubStatus.repository}@${githubStatus.branch}。`
-          : (githubStatus?.error || '尚未完成 GitHub App 設定。')"
+          : (githubStatus?.error
+            || (githubStatus?.missing?.length
+              ? `缺少 Worker runtime 設定：${githubStatus.missing.join(', ')}`
+              : '尚未完成 GitHub App 設定。'))"
         :status="githubStatus?.connected ? 'Connected' : 'Unavailable'"
         action="重新檢查連線"
         :action-disabled="githubRequestStatus === 'pending'"
